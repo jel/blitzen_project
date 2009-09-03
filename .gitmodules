@@ -1,0 +1,3 @@
+[submodule "testapp1"]
+	path = testapp1
+	url = /home/lb/git/djapp
