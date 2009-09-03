@@ -51,6 +51,3 @@ ROOT_URLCONF = 'quickening.urls'
 
 TEMPLATE_DIRS = quickening.app_resolver.template_paths()
 INSTALLED_APPS = quickening.app_resolver.installed_apps()
-
-print "INSTALLED_APPS:", INSTALLED_APPS
-print "MIDDLEWARE_CLASSES:", MIDDLEWARE_CLASSES

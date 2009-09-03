@@ -52,6 +52,14 @@ class AppInfo(object):
             deps = mod.MIDDLEWARE_DEPENDENCIES
         except AttributeError:
             deps = {}
+
+        mw_dir = _os.path.join(self._full_path, 'middleware')
+        mw_file = _os.path.join(self._full_path, 'middleware.py')
+
+        if _os.path.isdir(mw_dir) or _os.path.isfile(mw_file):
+            if not deps.has_key(self.name()):
+                deps.append( (self.name(), None) )
+
         return deps
 
     def name(self):
